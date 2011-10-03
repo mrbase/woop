@@ -1,0 +1,10 @@
+{% extends 'layout.twig' %}
+{% block content %}
+{% include "account/menu.twig" %}
+<h2>Delete account confirmation</h2>
+<form action="/delete-account" method="post">
+  <p>Yeah! just nuke my wOOp! account, and all associated links.</p>
+  <input type="submit" value="Nuke">
+</form>
+<a href="/account">nooo, please leave my account alone</a>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+
+{% include "account/menu.twig" %}
+
+<h1>Yo {{ user.name }}!</h1>
+
+<p>To begin bookmarking pages, drag n' drop the "<a href="javascript:if(!document.getElementById('woop-script')){var s=document.createElement('script');s.type='text/javascript';s.src='http://{{ http_host }}/load/v1/{{ user.token }}/woop.js';s.id='woop-script';document.getElementsByTagName('body')[0].appendChild(s);}else{woop.click();}">wOOp!</a>" link here onto your bookmark bar.</p>
+<p>Once enabled, you can now press the "wOOp" bookmark to add pages you come across while surfing the web.</p>
+
+{% if bookmarks %}
+  {% include "account/bookmarks.twig" with {'bookmarks': bookmarks} only %}
+{% endif %}
+
+{% endblock %}
