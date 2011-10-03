@@ -1,0 +1,26 @@
+<h3>Your bookmarks</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th class="date">Added</th>
+      <th class="actions"></th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for bookmark in bookmarks %}
+    <tr>
+      <td><a href="{{ bookmark.link }}" title="visit the site - will open in a new window" class="link">{{ bookmark.title }}</a></td>
+      <td>{{ bookmark.date|date('d/m Y') }}</td>
+      <td>
+        <a href="/delete-link/{{ bookmark.id }}" class="delete" title="delete this bookmark">delete</a>
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="3">««o»»</td>
+    </tr>
+  </tfoot>
+</table>

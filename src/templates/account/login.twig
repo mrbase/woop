@@ -1,0 +1,20 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+
+<form action="/login" method="post">
+  <label for="username">
+    Username:
+    <input type="text" name="username" id="username">
+  </label>
+  <label for="password">
+    Password:
+    <input type="password" name="password" id="password">
+  </label>
+  <input type="submit" value="Login" class="button">
+  <a href="/request-password">Forgotten password ?</a>
+</form>
+
+<p>No account yet ? Well go ahead and <a href="/create-account">create one</a>.</p>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+
+<form action="/add/v1/1234abc/" method="post">
+  <input name="test_1" value="test 1" />
+  <input name="test_2" value="test 2" />
+  <input name="test_3" value="test 3" />
+  <input type="submit" value="send" />
+</form>
+
+    <div class="wrapper">
+      <a href="" class="controls back">«</a>
+      <div id="item-container"></div>
+      <a href="" class="controls forward">»</a>      
+    </div>
+{% endblock %}

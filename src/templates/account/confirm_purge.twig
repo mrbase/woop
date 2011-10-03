@@ -1,0 +1,10 @@
+{% extends 'layout.twig' %}
+{% block content %}
+{% include "account/menu.twig" %}
+<h2>Purge account aka delete all links.</h2>
+<form action="/purge-account" method="post">
+  <p>Please do delete all links</p>
+  <input type="submit" value="Purge">
+</form>
+<a href="/account">nooo, please leave my links alone</a>
+{% endblock %}

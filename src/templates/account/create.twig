@@ -1,0 +1,31 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+<form action="/create-account" method="post">
+  <label for="input-username"{% if form_error_fields.username %} class="error"{% endif %}>
+    Username:
+    {% if username %}
+    <span class="input">{{ username }}</span>
+    {% else %}
+    <input type="text" name="username" id="input-username">
+    {% endif %}
+  </label>
+  <label for="input-password"{% if form_error_fields.password %} class="error"{% endif %}>
+    Password:
+    <input type="password" name="password" id="input-password">
+  </label>
+  <label for="input-name"{% if form_error_fields.name %} class="error"{% endif %}>
+    Real name:
+    <input type="text" name="name" id="input-name" value="{{ name }}">
+  </label>
+  <label for="input-email"{% if form_error_fields.email %} class="error"{% endif %}>
+    Email:
+    <input type="email" name="email" id="input-email" value="{{ email }}">
+  </label>
+  <label for="input-secret"{% if form_error_fields.secret %} class="error"{% endif %}>
+    Secret:
+    <input type="text" name="secret" id="input-secret" value="{{ secret }}">
+  </label>
+  <input type="submit" value="Create">
+</form>
+{% endblock %}
