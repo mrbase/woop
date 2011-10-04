@@ -4,6 +4,7 @@ wOOp!
 wOOp! is a proof-of-concept bookmarking/read-me-later service build with [silex][sx], javascript and a lot of coffee..
 
 It uses a [bookmarklet][bl] to allow users to add pages to an online archive of links for later use.
+There are plans for adding firefox and chrome extensions.
 
 Requirements
 ------------
